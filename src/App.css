@@ -1,0 +1,52 @@
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #0079d3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.lanes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.lanes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dropdown-container {
+  margin-top: 20px;
+}
+
