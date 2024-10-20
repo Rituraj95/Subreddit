@@ -3,14 +3,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addSubreddit } from './slices/subredditSlice';
 import SubredditLane from './component/SubredditLane';
 import './App.css';
+import image from './component/images.png'
 
 function App() {
   const lanes = useSelector((state) => state.subreddit.lanes);
   const dispatch = useDispatch();
   const [subredditInput, setSubredditInput] = useState('');
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768); // Mobile view state
-  const [selectedSubreddit, setSelectedSubreddit] = useState(''); // For dropdown selection
-
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  const [selectedSubreddit, setSelectedSubreddit] = useState(''); 
   useEffect(() => {
     const handleResize = () => setIsMobileView(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
@@ -20,7 +20,7 @@ function App() {
   const handleAddSubreddit = () => {
     if (subredditInput.trim() !== '') {
       dispatch(addSubreddit(subredditInput));
-      setSubredditInput(''); // Clear input after adding
+      setSubredditInput(''); 
     }
   };
 
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Multi-Lane Reddit Client</h1>
+      <img src={image} alt="" />
       <div className="input-container">
         <input
           type="text"
